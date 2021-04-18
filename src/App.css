@@ -76,12 +76,15 @@ input.error {
   margin-right: 1%;
   
 }
-.address{
+.cpassword{
   margin-left: 1%;
+}
+.address{
+  margin-right: 1%;
   
 }
 .date{
-  margin-right:1% ;
+  margin-left:1% ;
 }
 
 
@@ -96,6 +99,7 @@ input.error {
 .date,
 .fname,
 .password,
+.cpassword,
 .address,.milestone
 {
   display: flex;
@@ -105,7 +109,7 @@ input.error {
 }
 
 .lname,
-.email,.fname,.password,.contact,.address,.date ,.milestone{
+.email,.fname,.password,.contact,.address,.cpassword,.date ,.milestone{
   width: 49%;
 }
 

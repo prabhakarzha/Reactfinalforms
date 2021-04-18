@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 
-class Form extends Component {
+class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      fname: "Prabhakar ",
-      lname: "kumar",
-      email: "dddd@gmail.com",
-      password: "ddddddd",
-      contact: 9989898998,
-      address: "delhi",
+      fname: "",
+      lname: "",
+      email: "",
+      password: "",
+      contact: '',
+      address: "",
       date: "",
     };
   }
@@ -19,10 +19,21 @@ class Form extends Component {
 
 handlechange = (event) =>{
     this.setState({[event.target.name]:event.target.value})
+    
 } 
   handleSubmit =(event) =>{
       alert(JSON.stringify(this.state))
       event.preventDefault();
+
+      const { fname, lname,email, password, cpassword,contact,address,date } = this.state;
+
+      
+    if (password !== cpassword) {
+      alert("passwords don't match");
+      return;
+    }
+
+
 
   }
 
@@ -62,6 +73,7 @@ handlechange = (event) =>{
                 value={this.state.email}
                 type="email"
                 name="email"
+                autoComplete="off"
                 onChange={this.handlechange}
                 required
               />
@@ -85,6 +97,19 @@ handlechange = (event) =>{
                 value={this.state.contact}
                 type="contact"
                 name="contact"
+                onChange={this.handlechange}
+                required
+              />
+            </div>
+
+            <div className="cpassword">
+              <label htmlFor="cpassword">Confirm Password</label>
+              <input
+                placeholder="Confirm Password"
+                value={this.state.cpassword}
+                type="cpassword"
+                name="cpassword"
+                autoComplete="off"
                 onChange={this.handlechange}
                 required
               />
