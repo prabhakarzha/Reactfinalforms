@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+
+.wrapper {
+  height: 120vh;
+  width: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  background-color:white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.form-wrapper {
+  width: 900px;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+  width: 150%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+label {
+  font-size: 0.8em;
+  margin-bottom: 0.25em;
+  color:blue;
+  font-weight: bold;
+ 
+}
+
+input {
+  padding: 10px 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #cfcfcf;
+}
+
+input::placeholder {
+  font-size: 1.2em;
+  font-weight: lighter;
+  color: #999;
+}
+
+input.error {
+  border: 1px solid red;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 0.75em;
+  display: relative;
+}
+
+.fname{
+  margin-right: 1%;
+  
+}
+.lname {
+  margin-left: 1%;
+
+}
+
+.email {
+  margin-right: 1%;
+}
+.password{
+  margin-left: 1%;
+
+}
+.contact{
+  margin-right: 1%;
+  
+}
+.address{
+  margin-left: 1%;
+  
+}
+.date{
+  margin-right:1% ;
+}
+
+
+
+
+
+
+
+.lname,
+.email,
+.contact,
+.date,
+.fname,
+.password,
+.address,.milestone
+{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 15px;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.lname,
+.email,.fname,.password,.contact,.address,.date ,.milestone{
+  width: 49%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* .motor,
+.reflexes,
+.Motor {
+  width: 100%;
+} */
+
+.Submit {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
 }
+
+.Submit button {
+  background-color: blue;
+  color: #fff;
+  border: 15px solid #fff;
+  width: 60%;
+  margin-top: 0.25em;
+  padding: 8px 0px;
+  font-size: 1em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-bottom: 0.25em;
+  border-radius: 30px;
+ 
+ 
+}
+
+.Submit button:hover {
+  color: #519e8a;
+  background-color: #fff;
+  border: 2px solid #519e8a;
+}
+
+
